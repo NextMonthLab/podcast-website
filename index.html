@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-nm-id="site-title">Podcast Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .features, .testimonials, .contact, .gallery {
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .hero {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header data-nm-block="header">
+        <h1 data-nm-id="header-title">Podcast Website</h1>
+        <nav data-nm-id="main-navigation">
+            <a href="#home" data-nm-id="nav-home">Home</a>
+            <a href="#about" data-nm-id="nav-about">About</a>
+            <a href="#services" data-nm-id="nav-services">Services</a>
+            <a href="#contact" data-nm-id="nav-contact">Contact</a>
+        </nav>
+    </header>
+    <section data-nm-block="hero-section" class="hero">
+        <h2 data-nm-id="hero-title">Welcome to Our Music Podcast</h2>
+    </section>
+    <section data-nm-block="features-section" class="features">
+        <h2 data-nm-id="features-title">Features</h2>
+        <p data-nm-id="features-description">Explore our amazing podcast features.</p>
+    </section>
+    <section data-nm-block="testimonials-section" class="testimonials">
+        <h2 data-nm-id="testimonials-title">Testimonials</h2>
+        <p data-nm-id="testimonials-description">Hear what our listeners have to say.</p>
+    </section>
+    <section data-nm-block="gallery-section" class="gallery">
+        <h2 data-nm-id="gallery-title">Photo Gallery</h2>
+        <img src="photo1.jpg" alt="Gallery Image 1" data-nm-id="gallery-image-1">
+        <img src="photo2.jpg" alt="Gallery Image 2" data-nm-id="gallery-image-2">
+        <img src="photo3.jpg" alt="Gallery Image 3" data-nm-id="gallery-image-3">
+    </section>
+    <section data-nm-block="contact-section" class="contact">
+        <h2 data-nm-id="contact-title">Contact Us</h2>
+        <form data-nm-id="contact-form">
+            <input type="text" placeholder="Your Name" data-nm-id="contact-name" required>
+            <input type="email" placeholder="Your Email" data-nm-id="contact-email" required>
+            <textarea placeholder="Your Message" data-nm-id="contact-message" required></textarea>
+            <button type="submit" data-nm-id="contact-submit" data-nm-type="submit-button">Send</button>
+        </form>
+    </section>
+    <footer data-nm-block="footer">
+        <p data-nm-id="footer-text">&copy; 2023 Podcast Website. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('[data-nm-id="contact-form"]').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for contacting us!');
+        });
+    </script>
+</body>
+</html>
